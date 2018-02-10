@@ -23,14 +23,14 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   echo $string;
 
   // Ausgabe:
-  sRnGJBj28LvDS0CT1dLkw9z5JmiTLcR9BOWC7B1M2LrSCvXzknTgJ9auo2Q/5ekVbq83qKlgmhHTsPy03HZj57jrxPLo846Ccr2z0qZBb7Fb
+  // sRnGJBj28LvDS0CT1dLkw9z5JmiTLcR9BOWC7B1M2LrSCvXzknTgJ9auo2Q/5ekVbq83qKlgmhHTsPy03HZj57jrxPLo846Ccr2z0qZBb7Fb
 
   // String entschlüsseln 
   $cryptedString = cryptor::decrypt('sRnGJBj28LvDS0CT1dLkw9z5JmiTLcR9BOWC7B1M2LrSCvXzknTgJ9auo2Q/5ekVbq83qKlgmhHTsPy03HZj57jrxPLo846Ccr2z0qZBb7Fb');
   echo $string;
 
   // Ausgabe:
-  Mein zu verschlüsselender String
+  // Mein zu verschlüsselender String
 ```
 <a name="beispiel2"></a>
 ### Beispiel: Arrays verschlüsseln
@@ -77,11 +77,11 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   print_r($array);
 
   // Ausgabe:
-  Array
-  (
-    [mein Key 1] => 76L0+YhFGWRY3fv2Mwn/iPEL1tacHPKi5OCE5blVJnDEmeLqD13T5QE42Jwd6BSsiu3rhMpAIY7Uuw4+9Q4aXkc=
-    [mein Key 2] => aVVw2+Vg9mw5hb9E0d9n20FrsHc+0xh0DrsuWreCFuIbTnN5iMn/Pa5k2CCyM/pByswGJBXf4ZRyoCtCeIa4z+w=
-  )
+  // Array
+  // (
+  //   [mein Key 1] => 76L0+YhFGWRY3fv2Mwn/iPEL1tacHPKi5OCE5blVJnDEmeLqD13T5QE42Jwd6BSsiu3rhMpAIY7Uuw4+9Q4aXkc=
+  //   [mein Key 2] => aVVw2+Vg9mw5hb9E0d9n20FrsHc+0xh0DrsuWreCFuIbTnN5iMn/Pa5k2CCyM/pByswGJBXf4ZRyoCtCeIa4z+w=
+  // )
 
   // Array entschlüsseln (mit array key)
   $array = cryptor::decrypt([
@@ -91,11 +91,11 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   print_r($array);
 
   // Ausgabe:
-  Array
-  (
-    [mein Key 1] => Mein Array Wert 1
-    [mein Key 2] => Mein Array Wert 2
-  )
+  // Array
+  // (
+  //   [mein Key 1] => Mein Array Wert 1
+  //   [mein Key 2] => Mein Array Wert 2
+  // )
 ```
 
 <a name="beispiel4"></a>
@@ -115,16 +115,16 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   print_r($array);
 
   // Ausgabe:
-  Array
-  (
-    [mein Key 1] => tRlwGlAek1EPeZqfjRdOt+3XKe29Iq1PHb79U46yjCvI+oENr6hAxk6dewmgVIU7bCHHvIGmWBtIDLgS5THpORs=
-    [mein Key 2] => ZM3IkaFqNkHI3nvCzLNjiVxqO8ahHMgHaS20XoM0QBzetEVpUO8d8qySjRx37Wb1u0vvdEB0x0Ml+5BbMQwp3/E=
-    [mein child array] => Array
-        (
-            [a] => GQYVfBJ2XfLociY+EItaD6zGU+KSHyir34BNJM2N2c9SN5UxvKkXAeB3JoKrrK1YrdnUzv93TaqOnmDWOmS6Sro=
-            [b] => q4mMweqOGfqR7waAvt5QwYmGnYvZ0JEXQMsbjIv9HF/vhknfCeoKT5ftzV6l4wLHFefPPKSnr+EU7BlbdFLRfs8=
-        )
-  )
+  // Array
+  // (
+  //   [mein Key 1] => tRlwGlAek1EPeZqfjRdOt+3XKe29Iq1PHb79U46yjCvI+oENr6hAxk6dewmgVIU7bCHHvIGmWBtIDLgS5THpORs=
+  //   [mein Key 2] => ZM3IkaFqNkHI3nvCzLNjiVxqO8ahHMgHaS20XoM0QBzetEVpUO8d8qySjRx37Wb1u0vvdEB0x0Ml+5BbMQwp3/E=
+  //   [mein child array] => Array
+  //       (
+  //           [a] => GQYVfBJ2XfLociY+EItaD6zGU+KSHyir34BNJM2N2c9SN5UxvKkXAeB3JoKrrK1YrdnUzv93TaqOnmDWOmS6Sro=
+  //           [b] => q4mMweqOGfqR7waAvt5QwYmGnYvZ0JEXQMsbjIv9HF/vhknfCeoKT5ftzV6l4wLHFefPPKSnr+EU7BlbdFLRfs8=
+  //       )
+  // )
 
   // Mehrdimensionales Array entschlüsseln
   $array = cryptor::decrypt([
@@ -138,16 +138,16 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   print_r($array);
 
   // Ausgabe:
-  Array
-  (
-    [mein Key 1] => Mein Array Wert 1
-    [mein Key 2] => Mein Array Wert 2
-    [mein child array] => Array
-        (
-            [a] => Mein Child Wert a
-            [b] => Mein Child Wert b
-        )
-  )
+  // Array
+  // (
+  //   [mein Key 1] => Mein Array Wert 1
+  //   [mein Key 2] => Mein Array Wert 2
+  //   [mein child array] => Array
+  //       (
+  //           [a] => Mein Child Wert a
+  //           [b] => Mein Child Wert b
+  //       )
+  // )
 ```
 
 <a name="beispiel5"></a>
@@ -164,16 +164,16 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   print_r($result);
 
   // Ausgabe:
-  stdClass Object
-  (
-    [a] => IAH+veaCR/bEfG5UV0+zPrjAkk47sLb183A0OpLmNCyMO+7gnHBrywNaz6OrMndQeQZBGrssBAdzOl7c0WuU5TOj
-    [b] => kM7HLU4ekTU49S9dUr22RPAjMOHPOCObpcEyIf52FeeX+5Jm554mwzQHRxLtC7r+krto/3wwMJZ0DHAXrq79XvLU
-  )
+  // stdClass Object
+  // (
+  //   [a] => IAH+veaCR/bEfG5UV0+zPrjAkk47sLb183A0OpLmNCyMO+7gnHBrywNaz6OrMndQeQZBGrssBAdzOl7c0WuU5TOj
+  //   [b] => kM7HLU4ekTU49S9dUr22RPAjMOHPOCObpcEyIf52FeeX+5Jm554mwzQHRxLtC7r+krto/3wwMJZ0DHAXrq79XvLU
+  // )
 
   // Mehrdimensionales Object entschlüsseln
   $object = new stdClass();
-  $object->a = '74NfV19pQSbqFlxgtEmWnRBYDwzDX3IQYDBjQoRlr6fcwk29qOmJQG1hx3gkDCoTVxzN+ITpy11eljevrE/d7NU=';
-  $object->b = '2XQpzsunYxcxQavuuK8kxyvWokLFnF4s+mXvGc9zzuy86v5raDpCt3WZW4ARNT29a15Tyff0jVwxYen7kKc3EEs=';
+  $object->a = 'IAH+veaCR/bEfG5UV0+zPrjAkk47sLb183A0OpLmNCyMO+7gnHBrywNaz6OrMndQeQZBGrssBAdzOl7c0WuU5TOj';
+  $object->b = 'kM7HLU4ekTU49S9dUr22RPAjMOHPOCObpcEyIf52FeeX+5Jm554mwzQHRxLtC7r+krto/3wwMJZ0DHAXrq79XvLU';
   $object->c = new stdClass();
   $object->c->a1 = 'GQYVfBJ2XfLociY+EItaD6zGU+KSHyir34BNJM2N2c9SN5UxvKkXAeB3JoKrrK1YrdnUzv93TaqOnmDWOmS6Sro=';
   $object->c->b2 = 'q4mMweqOGfqR7waAvt5QwYmGnYvZ0JEXQMsbjIv9HF/vhknfCeoKT5ftzV6l4wLHFefPPKSnr+EU7BlbdFLRfs8=';
@@ -181,17 +181,16 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   print_r($result);
 
   // Ausgabe:
-  stdClass Object
-  (
-    [a] => Mein Array Wert 1
-    [b] => Mein Array Wert 2
-    [c] => stdClass Object
-        (
-            [a1] => Mein Child Wert a
-            [b2] => Mein Child Wert b
-        )
-
-  )
+  // stdClass Object
+  // (
+  //   [a] => Mein Object Wert 1
+  //   [b] => Mein Object Wert 2
+  //   [c] => stdClass Object
+  //       (
+  //           [a1] => Mein Child Wert a
+  //           [b2] => Mein Child Wert b
+  //       )
+  // )
 ```
 
 <a name="beispiel6"></a>
@@ -204,14 +203,14 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   echo $string;
 
   // Ausgabe:
-  UOLwNuVLTISED0FyA/RRDslECjGh8kxaAJtrFgbo19GTfA3HoK5asCfG7VUEm5cb/qqerRQNQ+naK43ihGNOLHv4IfEvQYOZ+SfrbsyXjW7/
+  // UOLwNuVLTISED0FyA/RRDslECjGh8kxaAJtrFgbo19GTfA3HoK5asCfG7VUEm5cb/qqerRQNQ+naK43ihGNOLHv4IfEvQYOZ+SfrbsyXjW7/
 
   // String entschlüsseln 
   $string = cryptor::decrypt('UOLwNuVLTISED0FyA/RRDslECjGh8kxaAJtrFgbo19GTfA3HoK5asCfG7VUEm5cb/qqerRQNQ+naK43ihGNOLHv4IfEvQYOZ+SfrbsyXjW7/', 'mitEinemAnderenEncryptionKey');
   echo $string;
 
   // Ausgabe:
-  Mein zu verschlüsselender String
+  // Mein zu verschlüsselender String
 ```
 <a name="helper"></a>
 ### Helper methoden

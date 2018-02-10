@@ -162,7 +162,6 @@ $content .= $this->i18n('yform_note_autodelete_change') . '<br>';
 $content .= $this->i18n('yform_note_autodelete_multible') . '<br>';
 $content .= $this->i18n('yform_note_autodelete_upload') . '</p>';
 
-
 // Submit button
 $formElements = [];
 $field  = '<button class="btn btn-save rex-form-aligned" type="submit" name="fields-submit" value="1" ';
