@@ -1,0 +1,23 @@
+package: cryptor/yform
+version: '0.1.2'
+author: 'Marcel Scherkamp'
+supportpage: https://redaxo.org/download/addons/cryptor/
+
+page:
+    title: translate:yform_plugin_title
+    perm: cryptor[yform]
+    pjax: true
+    icon: rex-icon fa-hand-spock-o
+    subpages:
+        index:
+            title: translate:yform_tables_autoencrypt
+            hidden: true
+        fields:
+            title: translate:yform_fields_autoencrypt
+            hidden: true
+
+requires:
+    packages:
+        yform: '^2.2'
+        yform/manager: '^2.2'
+        cryptor: '^0.1.5'

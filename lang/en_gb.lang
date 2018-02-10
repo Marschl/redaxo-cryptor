@@ -1,0 +1,39 @@
+# addon:cryptor en_gb
+
+cryptor_navigation = Cryptor
+cryptor_navigation_configuration = Settings
+cryptor_navigation_tools = Tools
+cryptor_navigation_help = Help
+
+# Title
+cryptor_addon_title = Cryptor
+cryptor_settings_title = Cryptor settings
+cryptor_tools_title = Cryptor tools
+
+# Settings
+cryptor_settings_openssl_title = OpenSSL encyption settings
+cryptor_settings_cipher_method = Cipher method
+cryptor_settings_cipher_method_note =  Warning: if you change the cipher method, previously encrypted data can not be decrypted anymore.
+cryptor_settings_encryption_key = Encryption key
+cryptor_settings_encryption_key_placeholder = Random salt
+cryptor_settings_encryption_key_note = Warning: if you change the encryption key, previously encrypted data can not be decrypted anymore.
+cryptor_settings_hash_algorithm = Hash algorithm
+cryptor_settings_hash_algorithm_note = Warning: if you change the hash algorithm, previously encrypted data can not be decrypted anymore.
+cryptor_settings_confirm_change = Are you really sure that you want to save the settings? Previously encrypted values may not be decrypted anymore!
+
+# Tools
+cryptor_tools_encrypt = Encrypt data
+cryptor_tools_decrypt = Decrypt data
+cryptor_tools_encrypt_plaintext = Plain string
+cryptor_tools_encrypt_encryptedtext = Encrypted string
+cryptor_tools_encrypt_result = Encrypted string
+cryptor_tools_decrypt_result = Plain string
+
+# Buttons
+cryptor_button_save = Save
+cryptor_button_generate = Generate
+
+# Messages
+cryptor_message_config_saved_successful = Settings saved
+cryptor_message_encryption_key_not_set = A random encryption string must be given.
+cryptor_message_cipher_does_not_exists = That cipher method does not exist.

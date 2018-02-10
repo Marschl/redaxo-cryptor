@@ -1,0 +1,34 @@
+# addon:cryptor_yform en_gb
+
+# Title
+cryptor_yform_plugin_title = yForm
+cryptor_yform_fields_title = Table fields for »{0}«
+cryptor_yform_tables_autoencrypt = Auto encryption tables
+cryptor_yform_fields_autoencrypt = Auto encryption fields
+
+# Label
+cryptor_yform_label_fieldname = Field name
+cryptor_yform_label_fieldlabel = Label
+cryptor_yform_label_fieldtype = Type
+cryptor_yform_label_encrypt_on_extension_point = Auto-Encrypt
+cryptor_yform_fields_confirm_change = Do you really want to save the field assignment? Already encrypted entries are not decrypted automatically!
+cryptor_yform_label_autodelete_field = Auto-Delete
+cryptor_yform_label_autodelete_upload = Delete the uploads too
+
+# Options
+cryptor_yform_option_interval_day = Days
+cryptor_yform_option_interval_week = Weeks
+cryptor_yform_option_interval_month = Months
+cryptor_yform_option_interval_year = Years
+cryptor_yform_option_interval_date_invalid = Invalid date format
+
+# Notes
+cryptor_yform_note_ep_legend = Legend Auto-Encrypt
+cryptor_yform_note_ep_rex_yform_saved = Value will be encrypted when a new entry is written to a yForm table (extension point {0}).
+cryptor_yform_note_ep_change = If the encryption is subsequently deactivated, already encrypted entries are not (!) automatically decrypted!
+cryptor_yform_note_autodelete_legend = Legend Auto-Delete
+cryptor_yform_note_autodelete_interval = If a value greater than 0 is entered, the database entry is automatically deleted after this period.
+cryptor_yform_note_autodelete_multible = Note: If multiple date fields are configured, the autodelete will pick up the first applicable time period.
+cryptor_yform_note_autodelete_format = The recommended format of the 'datestamp' field in the yForm manager is Y-m-d H:i:s, mysql or leave it empty.
+cryptor_yform_note_autodelete_change = If the yForm 'datestamp' format is subsequently changed, existing values in the database must also be changed manually!
+cryptor_yform_note_autodelete_upload = If yForm 'upload' fields are present, the deletion of the uploaded files can be activated.

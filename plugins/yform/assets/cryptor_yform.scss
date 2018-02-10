@@ -1,0 +1,67 @@
+$cryptorIconWidth: 25px;
+$cryptorIconDecrypt: '\f06e';
+$cryptorIconEncrypt: '\f070';
+$cryptorListValueMaxWidth: 300px;
+$cryptorColorLinked: #4b9ad9;
+$cryptorColorLinkedHover: #2674b2;
+
+.cryptor-yform-decrypt-icon {
+    display: inline-block;
+    width: $cryptorIconWidth;
+    color: $cryptorColorLinked;
+    text-align: left;
+    float: left;
+    cursor: pointer;
+
+    &::before {
+        content: $cryptorIconEncrypt;
+    }
+
+    &:hover {
+        color: $cryptorColorLinkedHover;
+    }
+}
+
+.cryptor-yform-element {
+    position: relative;
+    
+    span {
+        display: inline;
+    }
+    
+    span + span {
+        word-break: break-all;
+    }
+}
+
+.is-encrypted {
+    .cryptor-yform-decrypt-icon::before {
+        content: $cryptorIconDecrypt;
+    }
+
+    .cryptor-yform-list-value-wrapper {
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: calc(100% - #{$cryptorIconWidth});
+        max-width: $cryptorListValueMaxWidth;
+    }
+}
+
+.cryptor-yform-label-checkbox {
+    font-weight: normal;
+}
+
+.cryptor-yform-control-50 {
+    padding: 2px 5px;
+    max-width: 50px;
+    line-height: 1em;
+    height: auto;
+}
+.cryptor-yform-control-100 {
+    max-width: 100px;
+}
+.cryptor-yform-control-inline {
+    display: inline-block;
+    margin-right: 10px;
+}

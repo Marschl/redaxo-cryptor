@@ -1,0 +1,39 @@
+# addon:cryptor de_de
+
+cryptor_navigation = Cryptor
+cryptor_navigation_configuration = Einstellungen
+cryptor_navigation_tools = Tools
+cryptor_navigation_help = Hilfe
+
+# Title
+cryptor_addon_title = Cryptor
+cryptor_settings_title = Cryptor Einstellungen
+cryptor_tools_title = Cryptor Tools
+
+# Settings
+cryptor_settings_openssl_title = OpenSSL Encyption Einstellungen
+cryptor_settings_cipher_method = Cipher Methode
+cryptor_settings_cipher_method_note =  Achtung: wird die Cipher Methodegeändert, können vorher verschlüsselte Werte nicht mehr entschlüsselt werden.
+cryptor_settings_encryption_key = Encryption Key
+cryptor_settings_encryption_key_placeholder = Zufälliger String
+cryptor_settings_encryption_key_note = Achtung: wird der Encryption Key geändert, können vorher verschlüsselte Werte nicht mehr entschlüsselt werden.
+cryptor_settings_hash_algorithm = Hash Algorithmus
+cryptor_settings_hash_algorithm_note = Achtung: wird der Hash Algorithmus geändert, können vorher verschlüsselte Werte nicht mehr entschlüsselt werden.
+cryptor_settings_confirm_change = Sind Sie wirklich sicher, dass Sie die Einstellungen speichern wollen? Vorher verschlüsselte Werte können möglicherweise nicht mehr entschlüsselt werden!
+
+# Tools
+cryptor_tools_encrypt = Daten verschlüsseln
+cryptor_tools_decrypt = Daten entschlüsseln
+cryptor_tools_encrypt_plaintext = Unverschlüsselter Text
+cryptor_tools_encrypt_encryptedtext = Verschlüsselter Text
+cryptor_tools_encrypt_result = Verschlüsselter Text
+cryptor_tools_decrypt_result = Unverschlüsselter Text
+
+# Buttons
+cryptor_button_save = Sichern
+cryptor_button_generate = Erzeugen
+
+# Messages
+cryptor_message_config_saved_successful = Einstellungen gespeichert
+cryptor_message_encryption_key_not_set = Ein zufälliger Encryption-String muß gesetzt werden.
+cryptor_message_cipher_does_not_exists = Diese Cipher Methode existiert nicht.

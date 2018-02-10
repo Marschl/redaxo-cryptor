@@ -1,0 +1,34 @@
+# addon:cryptor_yform de_de
+
+# Title
+cryptor_yform_plugin_title = yForm
+cryptor_yform_fields_title = Tabellenfelder für »{0}«
+cryptor_yform_tables_autoencrypt = Auto-Encryption-Tabellen
+cryptor_yform_fields_autoencrypt = Auto-Encryption-Felder
+
+# Label
+cryptor_yform_label_fieldname = Feldname
+cryptor_yform_label_fieldlabel = Label
+cryptor_yform_label_fieldtype = Typ
+cryptor_yform_label_encrypt_on_extension_point = Auto-Encrypt
+cryptor_yform_fields_confirm_change = Wollen Sie die Feldzuweisung wirklich speichern? Vorher verschlüsselte Felder werden nicht automatisiert entschlüsselt!
+cryptor_yform_label_autodelete_field = Auto-Delete
+cryptor_yform_label_autodelete_upload = Uploads ebenfalls löschen
+
+# Options
+cryptor_yform_option_interval_day = Tagen
+cryptor_yform_option_interval_week = Wochen
+cryptor_yform_option_interval_month = Monaten
+cryptor_yform_option_interval_year = Jahren
+cryptor_yform_option_interval_date_invalid = Ungültiges Datums-Format
+
+# Notes
+cryptor_yform_note_ep_legend = Legende Auto-Encrypt
+cryptor_yform_note_ep_rex_yform_saved = Wert wird verschlüsselt, wenn ein neuer Eintrag in eine yForm-Tabelle geschrieben wird (Extension Point: {0}).
+cryptor_yform_note_ep_change = Wird nachträglich die Verschlüsselung deaktiviert, werden schon verschlüsselte Einträge nicht (!) automatisch entschlüsselt!
+cryptor_yform_note_autodelete_legend = Legende Auto-Delete
+cryptor_yform_note_autodelete_interval = Ist ein Wert größer 0 eingetragen, wird der Datenbank-Eintrag nach diesem Zeitraum automatisch gelöscht.
+cryptor_yform_note_autodelete_multible = Hinweis: Sind mehrere Datumsfelder konfiguriert, greift das Autodelete beim ersten zutreffenden Zeitraum.
+cryptor_yform_note_autodelete_format = Empfohlenes Format des Felds 'datestamp' im yForm-Manager ist Y-m-d H:i:s, mysql oder es leer zu lassen.
+cryptor_yform_note_autodelete_change = Wird das yForm 'datestamp' Format nachträglich geändert, müssen auch bestehende Werte in der Datenbank nachträglich angepasst werden!
+cryptor_yform_note_autodelete_upload = Sind yForm 'upload' Felder vorhanden, kann das Löschen der hochgeladenen Dateien aktiviert werden.

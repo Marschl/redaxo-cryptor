@@ -1,0 +1,28 @@
+package: cryptor
+version: '0.1.5'
+author: 'Marcel Scherkamp'
+supportpage: https://redaxo.org/download/addons/cryptor/
+
+page:
+    title: translate:navigation
+    perm: cryptor[]
+    pjax: false
+    icon: rex-icon fa-lock
+    subpages:
+        config: 
+            title: 'translate:navigation_configuration'
+            perm: cryptor[config]
+            icon: rex-icon fa-cog
+        tools: 
+            title: 'translate:navigation_tools'
+            perm: cryptor[tools]
+        help: 
+            title: 'translate:navigation_help'
+            perm: cryptor[help]
+            icon: rex-icon fa-question-circle-o 
+
+requires:
+    redaxo: ^5.2.0
+    php:
+        version: '>=5.3' 
+        extensions: [openssl]
