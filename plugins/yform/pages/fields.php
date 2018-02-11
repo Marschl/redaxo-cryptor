@@ -19,12 +19,31 @@ cryptor_yform_autodelete::setTable($tableName);
 
 // Save config
 if (rex_post('fields-submit', 'string') !== '' && rex::getUser()->hasPerm('cryptor[yform]')) {
-    $this->setConfig($tableName, rex_post('cryptor', [
+    
+    // Compare the current config with the new one
+    $oldConfig = $this->getConfig($tableName);
+    $newConfig = rex_post('cryptor', [
         $autoencryptExtensionPoints, 
         ['autodelete_fields'],
         ['autodelete_uploads']
-    ]));
-    $messages[] = $this->i18n('message_config_saved_successful');
+    ]);
+    $difference = cryptor_yform_autoencrypt::getConfigDifference($oldConfig, $newConfig);
+    
+    // Encrypt table entries
+    $encryptResults = cryptor_yform_autoencrypt::updateTableFields('encrypt', $tableName, $difference['fields_encrypt']);
+    if ($encryptResults > 0) {
+        $messages[] = $this->i18n('yform_message_table_entries_encrypted', $encryptResults, implode(', ', $difference['fields_encrypt']));
+    }
+    
+    // Decrypt table entries
+    $decryptResults = cryptor_yform_autoencrypt::updateTableFields('decrypt', $tableName, $difference['fields_decrypt']);
+    if ($decryptResults > 0) {
+        $messages[] = $this->i18n('yform_message_table_entries_decrypted', $decryptResults, implode(', ', $difference['fields_decrypt']));
+    }
+    
+    // Save new config
+    $this->setConfig($tableName, $newConfig);
+    $messages[] = $this->i18n('yform_message_config_saved_successful');
 }
 
 // Show warnings

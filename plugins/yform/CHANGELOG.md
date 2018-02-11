@@ -1,6 +1,14 @@
 Changelog
 =========
 
+Version 0.1.4 - 11.02.2018
+------------------------------
+
+### Updates
+
+* Wird eine auto-encrypt Einstellung geändert, werden die entsprechenden Tabelleneinträge zugleich ver- bzw. entschlüsselt.
+
+
 Version 0.1.3 - 11.02.2018
 ------------------------------
 

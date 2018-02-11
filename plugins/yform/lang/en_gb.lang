@@ -22,6 +22,11 @@ cryptor_yform_option_interval_month = Months
 cryptor_yform_option_interval_year = Years
 cryptor_yform_option_interval_date_invalid = Invalid date format
 
+# Messages
+cryptor_yform_message_config_saved_successful = Settings successfully saved
+cryptor_yform_message_table_entries_encrypted = {0} entries were encrypted ({1})
+cryptor_yform_message_table_entries_decrypted = {0} entries were decrypted ({1})
+
 # Notes
 cryptor_yform_note_ep_legend = Legend Auto-Encrypt
 cryptor_yform_note_ep_rex_yform_saved = Value will be encrypted when a new entry is written to a yForm table (extension point {0}).
