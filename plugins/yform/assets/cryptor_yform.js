@@ -16,7 +16,31 @@ var CRYPTOR_YFORM = (function(){
      * @returns {void}
      */
     var _init = function() {
+        _initYformTools();
         _initYformManager();
+    };
+    
+    /**
+     * Tools: manually encrypt or decrypt strings
+     * @returns {void}
+     */
+    var _initYformTools = function() {
+        $('#cryptor-tools-plaintext').change(function(){
+            _ajaxCallback({
+                cryptor_yform: 'backend_encrypt',
+                cryptor_yform_value: $(this).val()
+            }, function(data) {
+                $('#cryptor-tools-encrypt-result').val(data);
+            });
+        });
+        $('#cryptor-tools-encryptedtext').change(function(){
+            _ajaxCallback({
+                cryptor_yform: 'backend_decrypt',
+                cryptor_yform_value: $(this).val()
+            }, function(data) {
+                $('#cryptor-tools-decrypt-result').val(data);
+            });
+        });
     };
     
     /**

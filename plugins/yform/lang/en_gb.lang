@@ -11,7 +11,6 @@ cryptor_yform_label_fieldname = Field name
 cryptor_yform_label_fieldlabel = Label
 cryptor_yform_label_fieldtype = Type
 cryptor_yform_label_encrypt_on_extension_point = Auto-Encrypt
-cryptor_yform_fields_confirm_change = Do you really want to save the field assignment? Already encrypted entries are not decrypted automatically!
 cryptor_yform_label_autodelete_field = Auto-Delete
 cryptor_yform_label_autodelete_upload = Delete the uploads too
 
@@ -26,6 +25,10 @@ cryptor_yform_option_interval_date_invalid = Invalid date format
 cryptor_yform_message_config_saved_successful = Settings successfully saved
 cryptor_yform_message_table_entries_encrypted = {0} entries were encrypted ({1})
 cryptor_yform_message_table_entries_decrypted = {0} entries were decrypted ({1})
+cryptor_yform_message_config_table_not_exists = The given table is not valid yForm table.
+
+# Confirms
+cryptor_yform_config_confirm_change = Do you really want to save the field assignment? Existing database entries will be encrypted or decrypted accordingly!
 
 # Notes
 cryptor_yform_note_ep_legend = Legend Auto-Encrypt

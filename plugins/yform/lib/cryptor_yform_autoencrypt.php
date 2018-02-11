@@ -7,9 +7,10 @@
  */
 class cryptor_yform_autoencrypt extends cryptor_yform {
     
+    const UPDATE_CHUNK_SIZE = 100;
+    
     protected static $extensionPoints = ['REX_YFORM_SAVED'];
     protected static $fieldTypes = ['text', 'textarea', 'email'];
-    protected static $updateChunkSize = 100;
     
     /**
      * Returns all supported extension points
@@ -145,13 +146,12 @@ class cryptor_yform_autoencrypt extends cryptor_yform {
         
         // Split the updates into chunks
         $count = 0;
-        foreach(array_chunk($updates, self::updateChunkSize) as $updateChunk) {
+        foreach(array_chunk($updates, self::UPDATE_CHUNK_SIZE) as $updateChunk) {
             $query = $insertQuery .  implode(',', $updateChunk) . $duplicateQuery;
             $sql->setTable($tableName);
             $sql->setQuery($query);
-            $count += $sql->getRows();
+            $count += count($updateChunk);
         }
-        
         return $count;
     }
 }

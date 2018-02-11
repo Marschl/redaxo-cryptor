@@ -11,7 +11,6 @@ cryptor_yform_label_fieldname = Feldname
 cryptor_yform_label_fieldlabel = Label
 cryptor_yform_label_fieldtype = Typ
 cryptor_yform_label_encrypt_on_extension_point = Auto-Encrypt
-cryptor_yform_fields_confirm_change = Wollen Sie die Feldzuweisung wirklich speichern? Vorher verschlüsselte Felder werden nicht automatisiert entschlüsselt!
 cryptor_yform_label_autodelete_field = Auto-Delete
 cryptor_yform_label_autodelete_upload = Uploads ebenfalls löschen
 
@@ -26,6 +25,10 @@ cryptor_yform_option_interval_date_invalid = Ungültiges Datums-Format
 cryptor_yform_message_config_saved_successful = Einstellungen erfolgreich gespeichert
 cryptor_yform_message_table_entries_encrypted = {0} Einträge wurden verschlüsselt ({1})
 cryptor_yform_message_table_entries_decrypted = {0} Einträge wurden entschlüsselt ({1})
+cryptor_yform_message_config_table_not_exists = Die übergebene Tabelle ist keine gültige yForm-Tabelle.
+
+# Confirms
+cryptor_yform_config_confirm_change = Wollen Sie die Feldzuweisung wirklich speichern? Vorhandene Datenbankeinträge werden ver- bzw. entschlüsselt!
 
 # Notes
 cryptor_yform_note_ep_legend = Legende Auto-Encrypt
