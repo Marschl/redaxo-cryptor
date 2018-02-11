@@ -42,11 +42,11 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   print_r($array);
 
   // Ausgabe:
-  Array
-  (
-    [0] => 76L0+YhFGWRY3fv2Mwn/iPEL1tacHPKi5OCE5blVJnDEmeLqD13T5QE42Jwd6BSsiu3rhMpAIY7Uuw4+9Q4aXkc=
-    [1] => aVVw2+Vg9mw5hb9E0d9n20FrsHc+0xh0DrsuWreCFuIbTnN5iMn/Pa5k2CCyM/pByswGJBXf4ZRyoCtCeIa4z+w=
-  )
+  // Array
+  // (
+  //   [0] => 76L0+YhFGWRY3fv2Mwn/iPEL1tacHPKi5OCE5blVJnDEmeLqD13T5QE42Jwd6BSsiu3rhMpAIY7Uuw4+9Q4aXkc=
+  //   [1] => aVVw2+Vg9mw5hb9E0d9n20FrsHc+0xh0DrsuWreCFuIbTnN5iMn/Pa5k2CCyM/pByswGJBXf4ZRyoCtCeIa4z+w=
+  // )
 
   // Array entschlüsseln 
   $array = cryptor::decrypt([
@@ -56,11 +56,11 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   print_r($array);
 
   // Ausgabe:
-  Array
-  (
-    [0] => Mein Array Wert 1
-    [1] => Mein Array Wert 2
-  )
+  // Array
+  // (
+  //   [0] => Mein Array Wert 1
+  //   [1] => Mein Array Wert 2
+  // )
 
 ```
 <a name="beispiel3"></a>
