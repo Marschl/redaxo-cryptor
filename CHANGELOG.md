@@ -1,11 +1,12 @@
 Changelog
 =========
 
-Version 0.1.6 - 10.02.2018
+Version 0.1.6 - 11.02.2018
 ------------------------------
 ### Update
-* Repository nach github umgezogen
-* Readme aktualisiert
+
+* yForm-Tabellen-Ergebnisse können nun entschlüsselt exportiert werden (entsprechende Permission vorausgesetzt).
+
 
 Version 0.1.5 - 04.02.2018
 ------------------------------

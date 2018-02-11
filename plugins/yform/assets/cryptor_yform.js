@@ -1,6 +1,17 @@
 var CRYPTOR_YFORM = (function(){
     
     /**
+     * Translations
+     * @type {object}
+     */
+    var _i18n = {
+        export_decrypted: {
+            en: 'export decrypted',
+            de: 'entschlüsselt exportieren'
+        }
+    };
+    
+    /**
      * Initializer
      * @returns {void}
      */
@@ -17,6 +28,7 @@ var CRYPTOR_YFORM = (function(){
         if (!tableName) {
             return;
         }
+        
         var data = {
             cryptor_yform: 'field_names',
             cryptor_yform_value: tableName
@@ -38,15 +50,34 @@ var CRYPTOR_YFORM = (function(){
                     }
                 });
                 
+                // Add export Button
+                _addYformExportButtons();
+                
                 // Add events to form
-                _initYformSubmit($form); 
+                _initYformSubmit($form);
             }
         };
         _ajaxCallback(data, callback);
     };
     
     /**
+     * Adds a export button to the yform manager view
+     * @returns {void}
+     */
+    var _addYformExportButtons = function() {
+        $('.panel-heading.rex-has-panel-options .btn-default').each(function(){
+            if (this.href.indexOf('func=dataset_export') !== -1) {
+                var $exportButton = $(this).clone()
+                        .text(_getTranslation('export_decrypted'))
+                        .attr('href', this.href + '&cryptor_yform=dataset_export');
+                $(this).after($exportButton);
+            }
+        });
+    };
+    
+    /**
      * Encrypt unencrypted fields onSubmit
+     * @param {obj} $form
      * @returns {void}
      */
     var _initYformSubmit = function($form) {
@@ -213,6 +244,14 @@ var CRYPTOR_YFORM = (function(){
             $span.attr('title', content);
         }
         return $span.addClass('cryptor-yform-list-value-wrapper');
+    };
+    
+    var _getTranslation = function(key) {
+        return _i18n[key][_getLanguage()];
+    };
+    
+    var _getLanguage = function() {
+        return $('html').attr('lang');
     };
     
     /**

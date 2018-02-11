@@ -55,9 +55,9 @@ class cryptor_yform {
 
     /**
      * Executes ajax request
-     * @param type $type
-     * @param type $params
-     * @return type
+     * @param <string> $type
+     * @param <array> $params
+     * @return <string> $json
      */
     public static function executeAjaxRequest($type, $params) {
         // Decrypt a value within backend
@@ -75,6 +75,33 @@ class cryptor_yform {
             $fields = cryptor_yform_autoencrypt::getFieldLabels($config, $yFormTable);
             return json_encode($fields);
         }
+    }
+    
+    /**
+     * Execute data export
+     * @param rex_extension_point $ep
+     */
+    public static function executeDatasetExport(rex_extension_point $ep) {
+        if ($ep->getSubject() instanceof Exception || !$ep->hasParam('table')) {
+            return;
+        }
+ 
+        // Fetch yform table, config and fields
+        $yFormTable = $ep->getParam('table');
+        $config = self::getConfig($yFormTable->getTableName());
+        $fields = cryptor_yform_autoencrypt::getFieldNames($config, $yFormTable);
+        if (!count($fields)) {
+            return;
+        }
+        
+        // Decrypt dataset
+        $dataset = $ep->getSubject();
+        foreach($dataset as $key => $data) {
+            foreach($fields as $fieldName) {
+                $dataset[$key][$fieldName] = cryptor::decrypt($data[$fieldName]);
+            }
+        }
+        $ep->setSubject($dataset);
     }
 
     /**

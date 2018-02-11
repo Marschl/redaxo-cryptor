@@ -1,6 +1,14 @@
 Changelog
 =========
 
+Version 0.1.3 - 11.02.2018
+------------------------------
+
+### Updates
+
+* yForm-Tabellen-Ergebnisse können nun entschlüsselt exportiert werden (entsprechende Permission vorausgesetzt).
+
+
 Version 0.1.2 - 04.02.2018
 ------------------------------
 

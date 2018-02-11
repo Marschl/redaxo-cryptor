@@ -52,4 +52,19 @@ class cryptor_yform_autoencrypt extends cryptor_yform {
         return $fields;
     }
     
+    /**
+     * Returns the fieldnames which are encrypted 
+     * @param <array> $config
+     * @param <object> $yFormTable
+     * @return <array> $fieldnames
+     */
+    public static function getFieldNames($config, $yFormTable) {
+        $fields = self::getFieldLabels($config, $yFormTable);
+        $fieldNames = [];
+        foreach($fields as $field) {
+            $fieldNames[] = $field['name'];
+        }
+        return $fieldNames;
+    }
+    
 }

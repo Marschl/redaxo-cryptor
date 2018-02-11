@@ -10,7 +10,8 @@ Die Verschlüsselung greift bei einem Insert über den Extension-Point "REX_YFOR
 Die zu verschlüsselnden Felder sind über die Auto-Encryption-Tabellenübersicht festzulegen.
 Verschlüsselt werden aktuell die yform-Feldtypen: text, textarea und email.
 
-Über das (normale) yform-Backend können verschlüsselte Daten entschlüsselt angezeigt und auch editiert werden.
+Über das (normale) yform-Backend können verschlüsselte Daten entschlüsselt angezeigt und editiert werden.
+Ein komplett entschlüsselter Export ist möglich, sofern die yForm-Tabelle einen Export erlaubt.
 
 ### Automatisches Löschen
 Voraussetzung für ein automatisiertes Löschen ist ein yForm-Datenfeld des Typs 'datestamp'.
@@ -19,4 +20,4 @@ Rein theoretisch sind auch andere Format-Varianten möglich, nur aktuell nicht g
 
 Im Cryptor/yForm-Backend können diesen datestamp Felder ein Zeitpunkt zugewiesen werden, nachdem der Eintrag automatisiert gelöscht werden soll. Um diesen Vorgang zu triggern ist ein Cronjob Eintrag nötig:
 * cryptor_yform::executeAutodelete() um es auf alle definierten Tabellen auszuführen.
-* cryptor_yform::executeAutodelete( $tableName ) um es nur auf eine bestimmte Tabelle auszuführen.
+* cryptor_yform::executeAutodelete($tableName) um es nur auf eine bestimmte Tabelle auszuführen.
