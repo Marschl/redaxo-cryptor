@@ -6,7 +6,8 @@ Version 0.1.7 - 11.02.2018
 
 ### Updates
 
-* Wird eine 'Auto-Encrypt'-Einstellung eines Tabellefeldes geändert, werden entsprechende Tabelleneinträge zugleich ver- bzw. entschlüsselt.
+* Wird eine 'Auto-Encrypt'-Einstellung eines Tabellenfeldes geändert, werden entsprechende Tabelleneinträge zugleich ver- bzw. entschlüsselt.
+* Auch praktisch zum nachträglichem Verschlüsseln einer bestehenden Tabelle inkl. deren Einträgen (Hinweis: getestet bisher nur mit relativ kleinen Datenmengen)
 
 
 Version 0.1.6 - 11.02.2018

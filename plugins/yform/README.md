@@ -12,6 +12,7 @@ Verschlüsselt werden aktuell die yform-Feldtypen: text, textarea und email.
 
 Über das (normale) yform-Backend können verschlüsselte Daten entschlüsselt angezeigt und editiert werden.
 Ein komplett entschlüsselter Export ist möglich, sofern die yForm-Tabelle einen Export erlaubt.
+Wird die Verschlüsselung bei bestehenden und befüllten Tabellen aktiviert, werden vorhandene Werte verschlüsselt und vice versa.
 
 ### Automatisches Löschen
 Voraussetzung für ein automatisiertes Löschen ist ein yForm-Datenfeld des Typs 'datestamp'.
