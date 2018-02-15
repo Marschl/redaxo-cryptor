@@ -16,9 +16,9 @@ Wird die Verschlüsselung bei bestehenden und befüllten Tabellen aktiviert, wer
 
 ### Automatisches Löschen
 Voraussetzung für ein automatisiertes Löschen ist ein yForm-Datenfeld des Typs 'datestamp'.
-Als Format empfiehlt sich hier 'mysql', 'Y-m-d H:i:s' bzw. eine leere Format-Angabe.
+Als Format empfiehlt sich hier * <code>mysql</code>, <code>Y-m-d H:i:s</code> bzw. eine leere Format-Angabe.
 Rein theoretisch sind auch andere Format-Varianten möglich, nur aktuell nicht getestet.
 
 Im Cryptor/yForm-Backend können diesen datestamp Felder ein Zeitpunkt zugewiesen werden, nachdem der Eintrag automatisiert gelöscht werden soll. Um diesen Vorgang zu triggern ist ein Cronjob Eintrag nötig:
-* cryptor_yform::executeAutodelete() um es auf alle definierten Tabellen auszuführen.
-* cryptor_yform::executeAutodelete($tableName) um es nur auf eine bestimmte Tabelle auszuführen.
+* <code>cryptor_yform::executeAutodelete()</code> um es auf alle definierten Tabellen auszuführen.
+* <code>cryptor_yform::executeAutodelete($tableName)</code> um es nur auf eine bestimmte Tabelle auszuführen.

@@ -235,7 +235,7 @@ class cryptor_logs {
                 }
             }
         }
-        ksort($filelist);
+        sort($filelist);
         return $filelist;
     }
 

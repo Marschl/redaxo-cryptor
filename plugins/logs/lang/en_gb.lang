@@ -23,7 +23,7 @@ cryptor_logs_config_filelist = Directory content
 # Notes
 cryptor_logs_config_path_note = Absolute path to the log folder (e.g. <code>{0}</code>)
 cryptor_logs_config_filename_note = The name part of the log file (e.g. <code>access_log_</code> for a file name like "access_log_2018-02-10.gz").
-cryptor_logs_config_dateformat_note = The date format of the logfile name (e.g. <code>Y-m-d</code> for a file name like "access_log_2018-02-10.gz").
+cryptor_logs_config_dateformat_note = The date format of the logfile name (e.g. <code>Y-m-d</code> for a file name like "access_log_2018-02-10.gz").<br>If empty, an attempt is made to determine the date via the file itself.
 cryptor_logs_config_minage_note = The minimum age of logfiles in days (e.g. <code>30</code> or <code>0</code> to anonymize all log files).
 cryptor_logs_config_extension_note = The file format of the logfile (e.g. <code>gz</code> for gnu zip archives).
 cryptor_logs_config_suffix_note = The suffix which should be attached to edited log files (e.g. <code>cryptor</code> results in a file name like "access_log_2018-02-10.cryptor.gz")
