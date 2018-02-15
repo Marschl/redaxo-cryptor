@@ -91,6 +91,14 @@ class cryptor {
     public static function getCryptedStringMinLength() {
         return self::$cryptedStringMinLength;
     }
+    
+    /**
+     * Appends message to log file
+     * @param <string> $message
+     */
+    public static function log($message = '') {
+        self::_log($message);
+    }
 
     /**
      * Private encryptor
@@ -113,7 +121,7 @@ class cryptor {
         if (count($stringParts) === 2) {
             list($encryptedString, $iv) = $stringParts;
             return openssl_decrypt($encryptedString, static::$cipher, static::$key, 0, $iv);
-        } else {
+        } else if (!empty($string)) {
             self::_log('initializeVector missing in: ' . implode('', $stringParts));
         }
         return $string;

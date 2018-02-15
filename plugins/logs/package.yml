@@ -1,0 +1,20 @@
+package: cryptor/logs
+version: '0.1.0'
+author: 'Marcel Scherkamp'
+supportpage: https://redaxo.org/download/addons/cryptor/
+
+page:
+    title: translate:logs_plugin_title
+    perm: cryptor[logs]
+    pjax: true
+    icon: rex-icon fa-list-alt
+    subpages:
+        index:
+            title: translate:logs_config_title
+            hidden: true
+
+requires:
+    packages:
+        yform: '^2.2'
+        yform/manager: '^2.2'
+        cryptor: '^0.1.5'

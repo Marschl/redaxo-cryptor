@@ -1,0 +1,62 @@
+# addon:cryptor_logs en_gb
+
+# Title
+cryptor_logs_plugin_title = Logs
+
+# Settings
+cryptor_logs_config_settings = Logfile Settings
+cryptor_logs_config_title = Settings
+cryptor_logs_config_path = Path
+cryptor_logs_config_filename = File name
+cryptor_logs_config_dateformat = Date format
+cryptor_logs_config_minage = Minimal age (days)
+cryptor_logs_config_extension = File type
+cryptor_logs_config_suffix = Cryptor suffix
+cryptor_logs_config_pattern = Regex pattern
+cryptor_logs_config_delete = Delete Logfile
+cryptor_logs_config_replacement = Replacement rule
+cryptor_logs_config_logfilelist = Existing log files
+cryptor_logs_config_logfilelist_limited = {0} log files older than {1} days
+cryptor_logs_config_logfile_age = [age: {0} days]
+cryptor_logs_config_filelist = Directory content
+
+# Notes
+cryptor_logs_config_path_note = Absolute path to the log folder (e.g. <code>{0}</code>)
+cryptor_logs_config_filename_note = The name part of the log file (e.g. <code>access_log_</code> for a file name like "access_log_2018-02-10.gz").
+cryptor_logs_config_dateformat_note = The date format of the logfile name (e.g. <code>Y-m-d</code> for a file name like "access_log_2018-02-10.gz").
+cryptor_logs_config_minage_note = The minimum age of logfiles in days (e.g. <code>30</code> or <code>0</code> to anonymize all log files).
+cryptor_logs_config_extension_note = The file format of the logfile (e.g. <code>gz</code> for gnu zip archives).
+cryptor_logs_config_suffix_note = The suffix which should be attached to edited log files (e.g. <code>cryptor</code> results in a file name like "access_log_2018-02-10.cryptor.gz")
+cryptor_logs_config_pattern_note = The regex pattern to find the ip addresses in a log entry (z.B. <code>/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/</code> if the IP address is at the beginning of the entry).<br>Test regex pattern here: https://regex101.com
+cryptor_logs_config_replacement_note = The replacement of found IP addresses (e.g. <code>${1}.${2}.${3}.***</code> to replace the last digits with three stars).
+cryptor_logs_config_delete_note = Delete original logfile after disguising?
+
+# Buttons
+cryptor_logs_config_button_execute = Save & Execute
+
+# Messages
+cryptor_logs_message_config_saved_successful = Settings saved successfully..
+cryptor_logs_message_config_executed_successful = {0} log file(s) log files successfully obfuscated.
+
+# Defaults
+cryptor_logs_config_default_filename = access_log_
+cryptor_logs_config_default_dateformat = Y-m-d
+cryptor_logs_config_default_minage = 30
+cryptor_logs_config_default_extension = gz
+cryptor_logs_config_default_suffix = cryptor
+cryptor_logs_config_default_pattern = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/
+cryptor_logs_config_default_replacement = ${1}.${2}.${3}.***
+
+# Errors
+cryptor_logs_error_filepath_not_set = Log file path was not specified.
+cryptor_logs_error_filepath_not_exists = Specified log file path does not exist.
+cryptor_logs_error_filepath_not_writeable = Specified log file path is not writable.
+cryptor_logs_error_name_part_not_set = Name component of the log file was not specified.
+cryptor_logs_error_date_format_not_set = Date format of the log file was not specified.
+cryptor_logs_error_date_format_invalid = The date format of the logfile seems incorrect.
+cryptor_logs_error_extension_not_set = The file type of the log files was not specified.
+cryptor_logs_error_extension_not_supported = The specified file type is not supported.
+cryptor_logs_error_suffix_not_set = The file suffix of edited log files was not specified.
+cryptor_logs_error_regex_pattern_not_set = The regex pattern for detecting the ip address in a log entry was not specified.
+cryptor_logs_error_regex_pattern_invalid = The regex pattern for detecting the IP address in a log entry is not valid.
+cryptor_logs_error_replacement_pattern_not_set = The replacement rule for the ip address was not set.
