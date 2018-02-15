@@ -202,10 +202,11 @@ class cryptor_logs {
                     $fileInfo['age'] = $age;
                     $fileInfo['readpath'] = $filepath;
                     $fileInfo['writepath'] = self::getLogFilePath() . $fileInfo['filename'] . '.' . self::getLogFileCryptorSuffix() . '.' . $fileInfo['extension'];
-                    $filelist[] = $fileInfo;
+                    $filelist[$fileInfo['basename']] = $fileInfo;
                 }
             }
         }
+        ksort($filelist);
         return $filelist;
     }
 
@@ -224,6 +225,7 @@ class cryptor_logs {
                 }
             }
         }
+        ksort($filelist);
         return $filelist;
     }
 

@@ -1,6 +1,16 @@
 Changelog
 =========
 
+Version 0.1.8 - 15.02.2018
+------------------------------
+
+### Updates
+
+* Über das neue Plugin "Logs" können Ip-Adressen in Serverlog-Files nachträglich verschleiert werden. 
+* Voraussetzung sind Schreibrechte auf den Log-Ordner. 
+* Aktuell werden nur GnuZip-Archive (.gz) unterstützt.
+
+
 Version 0.1.7 - 11.02.2018
 ------------------------------
 
