@@ -146,14 +146,12 @@ if (!empty($path)) {
     
     // Log file list limited to max age
     $minAge = cryptor_logs::getLogFileMinAge();
-    if ($minAge > 0) {
-        $logFileList = cryptor_logs::getLogFileList(true, $minAge);
-        $n = [];
-        $n['label'] = '<label for="cryptor-logs-config-logfilelist">' . $this->i18n('cryptor_logs_config_logfilelist_limited', count($logFileList),  $minAge) . '</label>';
-        $n['field'] = '<textarea name="" class="form-control" rows="8" readonly>' . implode(PHP_EOL, $logFileList) . '</textarea>';
-        $n['note'] = $this->i18n('logs_config_path') . ': <code>' . $path . '</code>';
-        $formElements[] = $n;
-    }
+    $logFileList = cryptor_logs::getLogFileList(true, $minAge);
+    $n = [];
+    $n['label'] = '<label for="cryptor-logs-config-logfilelist">' . $this->i18n('cryptor_logs_config_logfilelist_limited', count($logFileList),  $minAge) . '</label>';
+    $n['field'] = '<textarea name="" class="form-control" rows="8" readonly>' . implode(PHP_EOL, $logFileList) . '</textarea>';
+    $n['note'] = $this->i18n('logs_config_path') . ': <code>' . $path . '</code>';
+    $formElements[] = $n;
     
 }
 

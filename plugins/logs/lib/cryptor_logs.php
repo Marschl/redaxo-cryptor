@@ -116,7 +116,7 @@ class cryptor_logs {
         if (empty(self::getLogFilePath())) {
             $response[] = rex_i18n::msg('cryptor_logs_error_filepath_not_set');
         } else if (!file_exists(self::getLogFilePath())) {
-            $response[] = rex_i18n::msg('cryptor_logs_error_filepath_not_exist');
+            $response[] = rex_i18n::msg('cryptor_logs_error_filepath_not_exists');
         } else if (rex_dir::isWritable(!self::getLogFilePath())) {
             $response[] = rex_i18n::msg('cryptor_logs_error_filepath_not_writeable');
         }
@@ -127,9 +127,7 @@ class cryptor_logs {
         }
 
         // Log date format
-        if (empty(self::getLogFileDateFormat())) {
-            $response[] = rex_i18n::msg('cryptor_logs_error_date_format_not_set');
-        } else if (!self::_validateDateFormat(self::getLogFileDateFormat())) {
+        if (!empty(self::getLogFileDateFormat()) && !self::_validateDateFormat(self::getLogFileDateFormat())) {
             $response[] = rex_i18n::msg('cryptor_logs_error_date_format_invalid');
         }
 
@@ -173,32 +171,44 @@ class cryptor_logs {
         $dateNow = new \DateTime();
         $dateFormatPattern = self::getLogFileDateFormat();
 
-        // For example: access_log_([^.]+).gz
-        $filenamePattern = '/' . self::getLogFileNamePart() . '([^\.]+)' . '\.' . self::getLogFileExtension() . '/i';
+        // For example: access.log.(.+[^\.cryptor])\.gz
+        $filenamePattern = '/' . self::getLogFileNamePart() . '(.+[^\.' . self::getLogFileCryptorSuffix() . '])\.' . self::getLogFileExtension() . '/i';
 
         // Loop over each log file and check the validity of filename
         foreach (glob(self::getLogFilePath() . self::getLogFileNamePart() . '*.' . self::getLogFileExtension()) as $filepath) {
             $fileInfo = $fileinfo = pathinfo($filepath);
+            
             if (preg_match($filenamePattern, $fileInfo['basename'])) {
-
-                // Validate date
-                $datePart = preg_replace($filenamePattern, '$1', $fileInfo['basename']);
-                $date = DateTime::createFromFormat($dateFormatPattern, $datePart);
-                if (!$date) {
+                
+                // Date from file name
+                if ($dateFormatPattern) {
+                    $datePart = preg_replace($filenamePattern, '$1', $fileInfo['basename']);
+                    $fileDate = DateTime::createFromFormat($dateFormatPattern, $datePart);
+                } 
+                
+                // Date from creation file date
+                else {
+                    $fileDate = DateTime::createFromFormat('Y-m-d H:i:s', date('Y-m-d H:i:s', filemtime($filepath)));
+                }
+                
+                // Not date? continue
+                if (!$fileDate) {
                     continue;
                 }
 
-                // Limit to min date
-                $dateDiff = $date->diff($dateNow);
-                $age = $dateDiff->days;
+                // Calc the date difference 
+                $dateDiff = $fileDate->diff($dateNow);
+                $age = (int) $dateDiff->days;
                 if ($minAge > 0 && $minAge > $age) {
                     continue;
                 }
 
-                // Add it to collection (flat or not)
+                // Add it to "flat" collection
                 if ($flat === true) {
                     $filelist[] = $fileInfo['basename'] . ' ' . rex_i18n::msg('cryptor_logs_config_logfile_age', $age);
-                } else {
+                } 
+                // Add it to "full" collection
+                else {
                     $fileInfo['age'] = $age;
                     $fileInfo['readpath'] = $filepath;
                     $fileInfo['writepath'] = self::getLogFilePath() . $fileInfo['filename'] . '.' . self::getLogFileCryptorSuffix() . '.' . $fileInfo['extension'];

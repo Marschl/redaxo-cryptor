@@ -5,6 +5,7 @@ Hintergrund ist die Datenschutz-Grundverordnung (DSVGO) die ab dem 25. Mai 2018 
 * Erwägungsgrund 30: "Online-Kennungen zur Profilerstellung und Identifizierung" https://dsgvo-gesetz.de/erwaegungsgruende/nr-30/
 
 Dieses Plugin zielt vorallem auf Serverumgebungen, bei denen sich das Anonymisieren nicht serverseitig steuern lässt.
+Es ist zu prüfen ob die Log-Einträge nicht schon vom Provider aus verschleiert generiert werden (z.B. 1und1).
 Schreibzugriff auf den Log-Ordner ist Voraussetzung. 
 
 Bei der Ersteinrichtung macht es Sinn das Minimalalter so zu setzen, dass erst wenige Logfiles verschleiert werden.

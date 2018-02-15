@@ -52,7 +52,6 @@ cryptor_logs_error_filepath_not_set = Log file path was not specified.
 cryptor_logs_error_filepath_not_exists = Specified log file path does not exist.
 cryptor_logs_error_filepath_not_writeable = Specified log file path is not writable.
 cryptor_logs_error_name_part_not_set = Name component of the log file was not specified.
-cryptor_logs_error_date_format_not_set = Date format of the log file was not specified.
 cryptor_logs_error_date_format_invalid = The date format of the logfile seems incorrect.
 cryptor_logs_error_extension_not_set = The file type of the log files was not specified.
 cryptor_logs_error_extension_not_supported = The specified file type is not supported.

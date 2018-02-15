@@ -22,12 +22,12 @@ cryptor_logs_config_filelist = Verzeichnisinhalt
 
 # Notes
 cryptor_logs_config_path_note = Absoluter Pfad zum Log-Ordner (z.B. <code>{0}</code>)
-cryptor_logs_config_filename_note = Der Namensbestandteil des Logfiles (z.B. <code>access_log_</code> bei einem Dateinamen wie "access_log_2018-02-10.gz").
-cryptor_logs_config_dateformat_note = Das Datumsformat des Logfile-Namens (z.B. <code>Y-m-d</code> für bei einem Dateinamen wie "access_log_2018-02-10.gz").
-cryptor_logs_config_minage_note = Das Mindestalter der Logfiles in Tagen (z.B. <code>30</code> oder <code>0</code> um alle log files zu anonymisieren).
+cryptor_logs_config_filename_note = Der Namensbestandteil des Logfiles (z.B. <code>access_log_</code> bei einem Dateinamen wie "access_log_2018-02-10.gz".
+cryptor_logs_config_dateformat_note = Das Datumsformat des Logfile-Namens (z.B. <code>Y-m-d</code> für bei einem Dateinamen wie "access_log_2018-02-10.gz" bei Allinkl).<br>Wenn leer, wird versucht das Datum über die Datei selbst zu ermitteln.
+cryptor_logs_config_minage_note = Das Mindestalter der Logfiles in Tagen (z.B. <code>30</code> oder <code>0</code> um alle Log Dateien zu anonymisieren).
 cryptor_logs_config_extension_note = Das Dateiformat des Logfiles (z.B. <code>gz</code> für GNU-Zip-Archive).
 cryptor_logs_config_suffix_note = Das Suffix, dass an bearbeitete Log-Files angehängt werden soll (z.B. <code>cryptor</code> ergibt einen Dateinamen wie "access_log_2018-02-10.cryptor.gz")
-cryptor_logs_config_pattern_note = Das Regex-Pattern um die Ip-Adressen in einem Log-Eintrag zu finden (z.B. <code>/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/</code> wenn die IP-Adresse am Anfang des Eintrags steht).<br> Tip zum vorher testen: https://regex101.com
+cryptor_logs_config_pattern_note = Das Regex-Pattern um die Ip-Adressen in einem Log-Eintrag zu finden (z.B. <code>/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/</code> wenn die IP-Adresse am Anfang des Eintrags steht).<br> Regex-Tester: https://regex101.com
 cryptor_logs_config_replacement_note = Die Ersetzung gefundener Ip-Adressen (z.B. <code>${1}.${2}.${3}.***</code> um die letzten Ziffern mit drei Sternen zu ersetzen).
 cryptor_logs_config_delete_note = Original-Logfile nach dem verschleiern löschen?
 
@@ -52,7 +52,6 @@ cryptor_logs_error_filepath_not_set = Logfile-Pfad wurde nicht angegeben.
 cryptor_logs_error_filepath_not_exists = Angegebener Logfile-Pfad existiert nicht.
 cryptor_logs_error_filepath_not_writeable = Angegebener Logfile-Pfad ist nicht beschreibbar.
 cryptor_logs_error_name_part_not_set = Namensbestandteil des Logfiles wurde nicht angegeben.
-cryptor_logs_error_date_format_not_set = Datumsformat des Logfiles wurde nicht angegeben.
 cryptor_logs_error_date_format_invalid = Das Datumsformat des Logfiles scheint unkorrekt.
 cryptor_logs_error_extension_not_set = Der Dateityp der Logfiles wurde nicht angegeben.
 cryptor_logs_error_extension_not_supported = Der angegebene Dateityp wird nicht unterstützt.
