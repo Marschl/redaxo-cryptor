@@ -33,7 +33,7 @@ cryptor_yform_config_confirm_change = Wollen Sie die Feldzuweisung wirklich spei
 # Notes
 cryptor_yform_note_ep_legend = Legende Auto-Encrypt
 cryptor_yform_note_ep_rex_yform_saved = Wert wird verschlüsselt, wenn ein neuer Eintrag in eine yForm-Tabelle geschrieben wird (Extension Point: {0}).
-cryptor_yform_note_ep_change = Wird nachträglich die Verschlüsselung deaktiviert, werden schon verschlüsselte Einträge nicht (!) automatisch entschlüsselt!
+cryptor_yform_note_ep_change = Wird die Verschlüsselung bei bestehenden und befüllten Tabellen aktiviert, werden vorhandene Werte verschlüsselt und vice versa.
 cryptor_yform_note_autodelete_legend = Legende Auto-Delete
 cryptor_yform_note_autodelete_interval = Ist ein Wert größer 0 eingetragen, wird der Datenbank-Eintrag nach diesem Zeitraum automatisch gelöscht.
 cryptor_yform_note_autodelete_multible = Hinweis: Sind mehrere Datumsfelder konfiguriert, greift das Autodelete beim ersten zutreffenden Zeitraum.

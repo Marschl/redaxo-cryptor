@@ -33,7 +33,7 @@ cryptor_yform_config_confirm_change = Do you really want to save the field assig
 # Notes
 cryptor_yform_note_ep_legend = Legend Auto-Encrypt
 cryptor_yform_note_ep_rex_yform_saved = Value will be encrypted when a new entry is written to a yForm table (extension point {0}).
-cryptor_yform_note_ep_change = If the encryption is subsequently deactivated, already encrypted entries are not (!) automatically decrypted!
+cryptor_yform_note_ep_change = Enabling encryption on existing and filled tables will encrypt existing values and vice versa.
 cryptor_yform_note_autodelete_legend = Legend Auto-Delete
 cryptor_yform_note_autodelete_interval = If a value greater than 0 is entered, the database entry is automatically deleted after this period.
 cryptor_yform_note_autodelete_multible = Note: If multiple date fields are configured, the autodelete will pick up the first applicable time period.
