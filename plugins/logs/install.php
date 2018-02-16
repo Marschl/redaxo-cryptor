@@ -12,6 +12,7 @@ if (!$this->hasConfig()) {
         'suffix' => 'cryptor',
         'pattern' => '/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/',
         'replacement' => '${1}.${2}.${3}.***',
-        'delete' => 0
+        'delete' => 0,
+        'delete_maxage' => 90
     ]);
 }

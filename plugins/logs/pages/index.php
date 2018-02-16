@@ -23,6 +23,7 @@ if (($submitSave || $submitExecute) && rex::getUser()->hasPerm('cryptor[logs]'))
         ['pattern', 'string'],
         ['replacement', 'string'],
         ['delete', 'int'],
+        ['delete_maxage', 'int'],
     ]));
     $messages[] = $this->i18n('logs_message_config_saved_successful');
     
@@ -90,6 +91,20 @@ $n['field'] = '<input class="form-control rex-code" id="cryptor-logs-config-mina
 $n['note'] = $this->i18n('logs_config_minage_note');
 $formElements[] = $n;
 
+// Delete log file after process
+$checked = (intval($this->getConfig('delete')) === 1) ? ' checked="checked"' : '';
+$n = [];
+$n['label'] = '<label for="cryptor-logs-config-delete"></label>';
+$n['field'] = '<input class="form-checkbox" id="cryptor-logs-config-delete" type="checkbox" name="settings[delete]" value="1" "' . $checked . '"> ' . $this->i18n('logs_config_delete_note');
+$formElements[] = $n;
+
+// Log file max age
+$n = [];
+$n['label'] = '<label for="cryptor-logs-config-delete-maxage">' . $this->i18n('logs_config_delete_maxage') . '</label>';
+$n['field'] = '<input class="form-control rex-code" id="cryptor-logs-config-delete-maxage" type="number" min="0" step="1" name="settings[delete_maxage]" value="' . $this->getConfig('delete_maxage') . '" placeholder="' . $this->i18n('logs_config_default_delete_maxage') . '">';
+$n['note'] = $this->i18n('logs_config_delete_maxage_note', $this->getConfig('delete_maxage'));
+$formElements[] = $n;
+
 // Log file type
 $n = [];
 $n['label'] = '<label for="cryptor-logs-config-extension">' . $this->i18n('logs_config_extension') . '</label>';
@@ -116,13 +131,6 @@ $n = [];
 $n['label'] = '<label for="cryptor-logs-config-replacement">' . $this->i18n('logs_config_replacement') . '</label>';
 $n['field'] = '<input class="form-control rex-code" id="cryptor-logs-config-replacement" type="text" name="settings[replacement]" value="' . $this->getConfig('replacement') . '" placeholder="' . $this->i18n('logs_config_default_replacement') . '">';
 $n['note'] = $this->i18n('logs_config_replacement_note');
-$formElements[] = $n;
-
-// Delete log file after mask
-$checked = (intval($this->getConfig('delete')) === 1) ? ' checked="checked"' : '';
-$n = [];
-$n['label'] = '<label for="cryptor-logs-config-delete">' . $this->i18n('logs_config_delete') . '</label>';
-$n['field'] = '<input class="form-checkbox" id="cryptor-logs-config-delete" type="checkbox" name="settings[delete]" value="1" "' . $checked . '"> ' . $this->i18n('logs_config_delete_note');
 $formElements[] = $n;
 
 $path = cryptor_logs::getLogFilePath();

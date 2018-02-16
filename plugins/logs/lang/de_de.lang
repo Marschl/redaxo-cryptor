@@ -9,11 +9,12 @@ cryptor_logs_config_title = Einstellungen
 cryptor_logs_config_path = Pfad
 cryptor_logs_config_filename = Dateiname
 cryptor_logs_config_dateformat = Datumsformat
-cryptor_logs_config_minage = Mindestalter (Tage)
+cryptor_logs_config_minage = Verschleiern nach x Tagen
 cryptor_logs_config_extension = Dateityp
 cryptor_logs_config_suffix = Cryptor Suffix
 cryptor_logs_config_pattern = Regex-Pattern
-cryptor_logs_config_delete = Logfile löschen
+cryptor_logs_config_delete = Original entfernen
+cryptor_logs_config_delete_maxage = Löschen nach x Tagen
 cryptor_logs_config_replacement = Ersetzungsregel
 cryptor_logs_config_logfilelist = Existierende Logfiles
 cryptor_logs_config_logfilelist_limited = {0} Logfiles älter als {1} Tage
@@ -24,12 +25,13 @@ cryptor_logs_config_filelist = Verzeichnisinhalt
 cryptor_logs_config_path_note = Absoluter Pfad zum Log-Ordner (z.B. <code>{0}</code>)
 cryptor_logs_config_filename_note = Der Namensbestandteil des Logfiles (z.B. <code>access_log_</code> bei einem Dateinamen wie "access_log_2018-02-10.gz".
 cryptor_logs_config_dateformat_note = Das Datumsformat des Logfile-Namens (z.B. <code>Y-m-d</code> für bei einem Dateinamen wie "access_log_2018-02-10.gz" bei Allinkl).<br>Wenn leer, wird versucht das Datum über die Datei selbst zu ermitteln.
-cryptor_logs_config_minage_note = Das Mindestalter der Logfiles in Tagen (z.B. <code>30</code> oder <code>0</code> um alle Log Dateien zu anonymisieren).
+cryptor_logs_config_minage_note = Das Mindestalter der Logfiles in Tagen (z.B. <code>30</code> oder <code>0</code> um alle Logfiles zu anonymisieren).
 cryptor_logs_config_extension_note = Das Dateiformat des Logfiles (z.B. <code>gz</code> für GNU-Zip-Archive).
 cryptor_logs_config_suffix_note = Das Suffix, dass an bearbeitete Log-Files angehängt werden soll (z.B. <code>cryptor</code> ergibt einen Dateinamen wie "access_log_2018-02-10.cryptor.gz")
 cryptor_logs_config_pattern_note = Das Regex-Pattern um die Ip-Adressen in einem Log-Eintrag zu finden (z.B. <code>/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/</code> wenn die IP-Adresse am Anfang des Eintrags steht).<br> Regex-Tester: https://regex101.com
 cryptor_logs_config_replacement_note = Die Ersetzung gefundener Ip-Adressen (z.B. <code>${1}.${2}.${3}.***</code> um die letzten Ziffern mit drei Sternen zu ersetzen).
 cryptor_logs_config_delete_note = Original-Logfile nach dem verschleiern löschen?
+cryptor_logs_config_delete_maxage_note = Ist ein Wert größer <code>0</code> eingetragen, werden Logfiles (origiale und verschleierte) die älter als die angegebenen Tage sind, automatisch gelöscht.
 
 # Buttons
 cryptor_logs_config_button_execute = Sichern & Ausführen
@@ -46,6 +48,7 @@ cryptor_logs_config_default_extension = gz
 cryptor_logs_config_default_suffix = cryptor
 cryptor_logs_config_default_pattern = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/
 cryptor_logs_config_default_replacement = ${1}.${2}.${3}.***
+cryptor_logs_config_default_delete_maxage = 90
 
 # Errors
 cryptor_logs_error_filepath_not_set = Logfile-Pfad wurde nicht angegeben.

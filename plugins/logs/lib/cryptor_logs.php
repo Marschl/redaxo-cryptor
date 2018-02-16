@@ -14,6 +14,11 @@ class cryptor_logs {
      * @return <int>
      */
     public static function executeIpReplacement() {
+        
+        // Delete old log files
+        self::_deleteLogFilesOlderThan(self::getLogFileDeleteMaxAge());
+        
+        // Loop over log files and process them
         $files = self::getLogFileList(null, self::getLogFileMinAge());
         foreach ($files as $file) {
             self::_processLogFile($file);
@@ -92,6 +97,14 @@ class cryptor_logs {
     public static function getLogFileDelete() {
         return (intval(self::getConfig('delete')) === 1);
     }
+    
+    /**
+     * Returns the max age of a log file
+     * @return <string>
+     */
+    public static function getLogFileDeleteMaxAge() {
+        return intval(self::getConfig('delete_maxage'));
+    }
 
     /**
      * Returns the default log path
@@ -157,6 +170,33 @@ class cryptor_logs {
 
         return $response;
     }
+    
+    /**
+     * Delete old log files
+     * @return <int> $deletedFilesCount
+     */
+    private static function _deleteLogFilesOlderThan($days = 0) {
+        
+        // Get max age in days
+        if (!$days) {
+            return;
+        }
+        
+        // Loop over each log file and verify file date
+        $dateNow = new \DateTime();
+        foreach (glob(self::getLogFilePath() . self::getLogFileNamePart() . '*.' . self::getLogFileExtension()) as $filepath) {
+            $date = self::_getFileDate($filepath);
+            if (!$date) {
+                continue;
+            }
+            $dateDiff = $date->diff($dateNow);
+            $fileAge = (int) $dateDiff->days;
+            if ($days > $fileAge) {
+                continue;
+            }
+            @unlink($filepath);
+        }
+    }
 
     /**
      * Returns a file list of log files, which have to be crypted
@@ -171,27 +211,15 @@ class cryptor_logs {
         $dateNow = new \DateTime();
         $dateFormatPattern = self::getLogFileDateFormat();
 
-        // For example: access.log.(.+[^\.cryptor])\.gz
+        // For example: access.log.(.+[^\.cryptor])\.gz // non processed files!
         $filenamePattern = '/' . self::getLogFileNamePart() . '(.+[^\.' . self::getLogFileCryptorSuffix() . '])\.' . self::getLogFileExtension() . '/i';
-
+        
         // Loop over each log file and check the validity of filename
         foreach (glob(self::getLogFilePath() . self::getLogFileNamePart() . '*.' . self::getLogFileExtension()) as $filepath) {
-            $fileInfo = $fileinfo = pathinfo($filepath);
+            $fileInfo = pathinfo($filepath);
             
             if (preg_match($filenamePattern, $fileInfo['basename'])) {
-                
-                // Date from file name
-                if ($dateFormatPattern) {
-                    $datePart = preg_replace($filenamePattern, '$1', $fileInfo['basename']);
-                    $fileDate = DateTime::createFromFormat($dateFormatPattern, $datePart);
-                } 
-                
-                // Date from creation file date
-                else {
-                    $fileDate = DateTime::createFromFormat('Y-m-d H:i:s', date('Y-m-d H:i:s', filemtime($filepath)));
-                }
-                
-                // Not date? continue
+                $fileDate = self::_getFileDate($filepath);
                 if (!$fileDate) {
                     continue;
                 }
@@ -227,7 +255,7 @@ class cryptor_logs {
      */
     public static function getFileList($path) {
         $filelist = [];
-        if (file_exists($path) === TRUE) {
+        if (file_exists($path) === TRUE && rex_dir::isWritable($path)) {
             foreach (rex_finder::factory($path) as $file) {
                 $fileinfo = pathinfo($file);
                 if (!empty($fileinfo['extension'])) {
@@ -237,6 +265,22 @@ class cryptor_logs {
         }
         sort($filelist);
         return $filelist;
+    }
+    
+    private static function _getFileDate($filepath) {
+        $dateFormatPattern = self::getLogFileDateFormat();
+        if ($dateFormatPattern) {
+            $fileInfo = pathinfo($filepath);
+            //access_log_([^\.]+)([\.cryptor]+)?.gz
+            $filenamePattern = '/' . self::getLogFileNamePart() . '([^\.]+)([\.' . self::getLogFileCryptorSuffix() . ']+)?.' . self::getLogFileExtension() . '/i';
+            $datePart = preg_replace($filenamePattern, '$1', $fileInfo['basename']);
+            return DateTime::createFromFormat($dateFormatPattern, $datePart);
+        } 
+
+        // Date from creation file date
+        else {
+            return DateTime::createFromFormat('Y-m-d H:i:s', date('Y-m-d H:i:s', filemtime($filepath)));
+        }
     }
 
     /**

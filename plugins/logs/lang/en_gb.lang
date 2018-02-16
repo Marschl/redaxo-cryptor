@@ -14,6 +14,7 @@ cryptor_logs_config_extension = File type
 cryptor_logs_config_suffix = Cryptor suffix
 cryptor_logs_config_pattern = Regex pattern
 cryptor_logs_config_delete = Delete Logfile
+cryptor_logs_config_delete_maxage = Delete after x days
 cryptor_logs_config_replacement = Replacement rule
 cryptor_logs_config_logfilelist = Existing log files
 cryptor_logs_config_logfilelist_limited = {0} log files older than {1} days
@@ -30,6 +31,7 @@ cryptor_logs_config_suffix_note = The suffix which should be attached to edited 
 cryptor_logs_config_pattern_note = The regex pattern to find the ip addresses in a log entry (z.B. <code>/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/</code> if the IP address is at the beginning of the entry).<br>Test regex pattern here: https://regex101.com
 cryptor_logs_config_replacement_note = The replacement of found IP addresses (e.g. <code>${1}.${2}.${3}.***</code> to replace the last digits with three stars).
 cryptor_logs_config_delete_note = Delete original logfile after disguising?
+cryptor_logs_config_delete_maxage_note = If a value greater than 0 is entered, logfiles (origials and processed) which are older than the specified days will be automatically deleted.
 
 # Buttons
 cryptor_logs_config_button_execute = Save & Execute
