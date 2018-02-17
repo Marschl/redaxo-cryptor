@@ -1,6 +1,16 @@
 Changelog
 =========
 
+
+Version 0.1.5 - 17.02.2018
+------------------------------
+
+### Updates
+
+* Kompatibiliät zu yForm Manager 2.3 hergestellt.
+* yForm Manager 2.3 ist nun Voraussetzung.
+
+
 Version 0.1.4 - 11.02.2018
 ------------------------------
 

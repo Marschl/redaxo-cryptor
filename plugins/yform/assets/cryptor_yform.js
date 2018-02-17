@@ -66,9 +66,8 @@ var CRYPTOR_YFORM = (function(){
                     $('#rex-page-yform-manager-data-edit .table td[data-title="' + this.label + '"]').each(function(){
                         _initYformList($(this));
                     });
-                    
                     if (_getYformFunc($form) === 'edit') {
-                        $('#rex-page-yform-manager-data-edit #yform-formular-' + this.name).each(function(){
+                        $('#rex-page-yform-manager-data-edit #yform-data_edit-' + tableName + '-' + this.name).each(function(){
                             _initYformElement($(this));
                         });
                     }
@@ -175,7 +174,6 @@ var CRYPTOR_YFORM = (function(){
      * @returns {void}
      */
     var _initYformElement = function($formElement) {
-        
         var $el = _getYformElement($formElement);
         if (!$el) {
             return;
@@ -221,8 +219,7 @@ var CRYPTOR_YFORM = (function(){
      * @returns {string} tableName
      */
     var _getCurrentYformTableName = function() {
-        var tableName = $('#rex-page-yform-manager-data-edit .page-header h1 small').text();
-        return tableName.replace(/\[|\]/gi, '');
+        return $('#rex-page-yform-manager-data-edit .page-header h1 small').text().replace(/\[|\]/gi, '');
     };
     
     /**

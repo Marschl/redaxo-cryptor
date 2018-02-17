@@ -8,6 +8,7 @@ Version 0.1.9 - 16.02.2018
 
 * Es kann ein Maximal-Alter in Tagen angegeben werden, nachdem Log-files automatisch gelöscht werden sollen.
 * Bugfix: Nicht les/beschreibbare Ordner unangetastet lassen
+* Plugin: yForm - yForm 2.3 ist nun Voraussetzung
 
 
 Version 0.1.8 - 15.02.2018
