@@ -228,6 +228,7 @@ var CRYPTOR_YFORM = (function(){
     
     /**
      * Returns value of get param if available
+     * @param {string} url query
      * @param {string} name
      * @returns {mixed} $value of param || null
      */
