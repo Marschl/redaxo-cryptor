@@ -228,16 +228,18 @@ var CRYPTOR_YFORM = (function(){
     
     /**
      * Returns value of get param if available
-     * @param {string} url query
+     * @param {string} url
      * @param {string} name
      * @returns {mixed} $value of param || null
      */
     var _getUrlParameter = function(url, name) {
-        var paramStrings = url.split('&');
-        for (var i = 0; i < paramStrings.length; i++) {
-            var params = paramStrings[i].split('=');
-            if (params[0] === name) {
-                return params[1];
+        if (url) {
+            var paramStrings = url.split('&');
+            for (var i = 0; i < paramStrings.length; i++) {
+                var params = paramStrings[i].split('=');
+                if (params[0] === name) {
+                    return params[1];
+                }
             }
         }
         return null;
