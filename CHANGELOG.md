@@ -1,6 +1,9 @@
 Changelog
 =========
 
+Version 0.2.0 - 08.03.2018
+------------------------------
+
 ### Updates
 
 * Bugfix: cryptor[yForm] Kompatibilität mit Addon Quicknavi hergestellt (danke @Daniel)
