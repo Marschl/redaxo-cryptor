@@ -1,6 +1,14 @@
 Changelog
 =========
 
+Version 0.1.6 - 08.03.2018
+------------------------------
+
+### Updates
+
+* Bugfix: cryptor[yForm] Kompatibilität mit Addon Quicknavi hergestellt (danke @Daniel)
+* Bugfix: cryptor[yForm] Unterstützung von Installationen in Unterordnern
+
 
 Version 0.1.5 - 17.02.2018
 ------------------------------

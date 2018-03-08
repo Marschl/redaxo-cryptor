@@ -205,7 +205,7 @@ var CRYPTOR_YFORM = (function(){
     var _ajaxCallback = function(data, callback) {
         $.ajax({
             dataType: 'json',
-            url: '/redaxo/',
+            url: '../redaxo/',
             method: 'POST',
             data: data,
             success: function(data) {
@@ -215,11 +215,31 @@ var CRYPTOR_YFORM = (function(){
     };
     
     /**
-     * Returns the current tablename from yform header element
+     * Returns the current tablename from yform hidden field or form action
      * @returns {string} tableName
      */
     var _getCurrentYformTableName = function() {
-        return $('#rex-page-yform-manager-data-edit .page-header h1 small').text().replace(/\[|\]/gi, '');
+        var tableName = $('form.rex-yform input[name="table_name"]').val();
+        if (!tableName) {
+            tableName = _getUrlParameter($('.rex-page-section form:first').attr('action'), 'table_name');
+        }
+        return tableName;
+    };
+    
+    /**
+     * Returns value of get param if available
+     * @param {string} name
+     * @returns {mixed} $value of param || null
+     */
+    var _getUrlParameter = function(url, name) {
+        var paramStrings = url.split('&');
+        for (var i = 0; i < paramStrings.length; i++) {
+            var params = paramStrings[i].split('=');
+            if (params[0] === name) {
+                return params[1];
+            }
+        }
+        return null;
     };
     
     /**
