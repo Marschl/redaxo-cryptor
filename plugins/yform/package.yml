@@ -1,5 +1,5 @@
 package: cryptor/yform
-version: '0.1.6'
+version: '0.1.7'
 author: 'Marcel Scherkamp'
 supportpage: https://redaxo.org/download/addons/cryptor/
 
@@ -18,6 +18,6 @@ page:
 
 requires:
     packages:
-        yform: '^2.3'
-        yform/manager: '^2.3'
+        yform: '>=2.3'
+        yform/manager: '>=2.3'
         cryptor: '^0.1.5'
