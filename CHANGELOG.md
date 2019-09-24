@@ -4,7 +4,7 @@ Changelog
 Version 0.2.0 - 08.03.2018
 ------------------------------
 
-### Updates
+## Updates
 
 * Bugfix: cryptor[yForm] Kompatibilität mit Addon Quicknavi hergestellt (danke @Daniel)
 * Bugfix: cryptor[yForm] Unterstützung von Installationen in Unterordnern
@@ -13,7 +13,7 @@ Version 0.2.0 - 08.03.2018
 Version 0.1.9 - 16.02.2018
 ------------------------------
 
-### Updates
+## Updates
 
 * Es kann ein Maximal-Alter in Tagen angegeben werden, nachdem Log-files automatisch gelöscht werden sollen.
 * Bugfix: Nicht les/beschreibbare Ordner unangetastet lassen
@@ -23,7 +23,7 @@ Version 0.1.9 - 16.02.2018
 Version 0.1.8 - 15.02.2018
 ------------------------------
 
-### Updates
+## Updates
 
 * Über das neue Plugin "Logs" können Ip-Adressen in Serverlog-Files nachträglich verschleiert werden. 
 * Voraussetzung sind Schreibrechte auf den Log-Ordner. 
@@ -33,7 +33,7 @@ Version 0.1.8 - 15.02.2018
 Version 0.1.7 - 11.02.2018
 ------------------------------
 
-### Updates
+## Updates
 
 * Wird eine 'Auto-Encrypt'-Einstellung eines Tabellenfeldes geändert, werden entsprechende Tabelleneinträge zugleich ver- bzw. entschlüsselt.
 * Auch praktisch zum nachträglichem Verschlüsseln einer bestehenden Tabelle inkl. deren Einträgen (Hinweis: getestet bisher nur mit relativ kleinen Datenmengen)
@@ -41,7 +41,7 @@ Version 0.1.7 - 11.02.2018
 
 Version 0.1.6 - 11.02.2018
 ------------------------------
-### Update
+## Update
 
 * yForm-Tabellen-Ergebnisse können nun entschlüsselt exportiert werden (entsprechende Permission vorausgesetzt).
 
@@ -49,7 +49,7 @@ Version 0.1.6 - 11.02.2018
 Version 0.1.5 - 04.02.2018
 ------------------------------
 
-### Update & Bugfixes
+## Update & Bugfixes
 
 * Bugfix: Extensionpoints werden nun noch einmalig registriert
 * Uploads können ebenfalls automatisch mit dem Eintrag gelöscht werden (yForm-Feldtyp upload)
@@ -59,7 +59,7 @@ Version 0.1.5 - 04.02.2018
 Version 0.1.4 - 27.01.2018
 ------------------------------
 
-### Update "Autodelete"
+## Update "Autodelete"
 
 * Es ist jetzt möglich, bei yForm-Felder des Typs 'datestamp' einen Zeitraum zu definieren, nach dem sie automatisch gelöscht werden sollen.
 * Das Format des datestamps Feldes sollte vorzugsweise Y-m-d H:i:s bzw. 'mysql' oder einfach leer sein.
@@ -70,7 +70,7 @@ Version 0.1.4 - 27.01.2018
 Version 0.1.3 - 23.01.2018
 ------------------------------
 
-### Updates
+## Updates
 
 * Neu: Plugin für yForm Manager
 * – Bei Inserts in eine yForm-Tabelle werden ausgewählte Werte verschlüsselt.
@@ -83,7 +83,7 @@ Version 0.1.3 - 23.01.2018
 Version 0.1.2 - 12.01.2018
 ------------------------------
 
-### Updates
+## Updates
 
 * Neu: Backend-Tool zum manuellen ver-/entschlüsseln
 * Optimierung: Code Vereinfachungen
@@ -92,7 +92,7 @@ Version 0.1.2 - 12.01.2018
 Version 0.1.1 – 11.01.2018
 ------------------------------
 
-### Updates
+## Updates
 
 * Php 5.3.0 als Minimum
 * Openssl als Requirement
@@ -100,6 +100,6 @@ Version 0.1.1 – 11.01.2018
 Version 0.1-alpha – 11.01.2018
 ------------------------------
 
-### Inital release
+## Inital release
 
 * Aktuell getestet nur mit 'AES-256-CTR' cipher

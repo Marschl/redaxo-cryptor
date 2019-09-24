@@ -8,13 +8,13 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
 - [Beispiel: Encryption key als zweiten Parameter übergeben](#beispiel6)
 - [Helper Methoden](#helper)
 
-### 
+## 
 <a name="ueber"></a>
 
 <a name="beispiel1"></a>
 ## Code-Beispiele
 
-### Beispiel: Strings verschlüsseln
+## Beispiel: Strings verschlüsseln
 
 ```php 
 <?php 
@@ -33,7 +33,7 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   // Mein zu verschlüsselender String
 ```
 <a name="beispiel2"></a>
-### Beispiel: Arrays verschlüsseln
+## Beispiel: Arrays verschlüsseln
 
 ```php 
 <?php 
@@ -64,7 +64,7 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
 
 ```
 <a name="beispiel3"></a>
-### Beispiel: Arrays verschlüsseln (mit Array Keys)
+## Beispiel: Arrays verschlüsseln (mit Array Keys)
 
 ```php 
 <?php 
@@ -99,7 +99,7 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
 ```
 
 <a name="beispiel4"></a>
-### Beispiel: Mehrdimensionale Arrays verschlüsseln
+## Beispiel: Mehrdimensionale Arrays verschlüsseln
 ```php 
 <?php 
   
@@ -151,7 +151,7 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
 ```
 
 <a name="beispiel5"></a>
-### Beispiel: Objekte verschlüsseln
+## Beispiel: Objekte verschlüsseln
 
 ```php 
 <?php 
@@ -194,7 +194,7 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
 ```
 
 <a name="beispiel6"></a>
-### Beispiel: Encryption key als zweiten Parameter übergeben
+## Beispiel: Encryption key als zweiten Parameter übergeben
 
 ```php 
 <?php 
@@ -213,7 +213,7 @@ Das Cryptor Addon stellt Methoden zur Zweiweg-Verschlüsselung von Daten zur Ver
   // Mein zu verschlüsselender String
 ```
 <a name="helper"></a>
-### Helper methoden
+## Helper methoden
 
 ```php 
 <?php 

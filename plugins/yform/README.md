@@ -5,7 +5,7 @@ Durch dieses Plugin können (sensible) personenbezogene Daten anonymisiert, gesc
 * Informationen zur DSVGO: https://dsgvo-gesetz.de/
 * Anforderungen an die Sicherheit der Datenverarbeitung: https://dsgvo-gesetz.de/bdsg-neu/64-bdsg-neu/
 
-### Automatische Verschlüsselung
+## Automatische Verschlüsselung
 Die Verschlüsselung greift bei einem Insert über den Extension-Point "REX_YFORM_SAVED"
 Die zu verschlüsselnden Felder sind über die Auto-Encryption-Tabellenübersicht festzulegen.
 Verschlüsselt werden aktuell die yform-Feldtypen: text, textarea und email.
@@ -14,7 +14,7 @@ Verschlüsselt werden aktuell die yform-Feldtypen: text, textarea und email.
 Ein komplett entschlüsselter Export ist möglich, sofern die yForm-Tabelle einen Export erlaubt.
 Wird die Verschlüsselung bei bestehenden und befüllten Tabellen aktiviert, werden vorhandene Werte verschlüsselt und vice versa.
 
-### Automatisches Löschen
+## Automatisches Löschen
 Voraussetzung für ein automatisiertes Löschen ist ein yForm-Datenfeld des Typs 'datestamp'.
 Als Format empfiehlt sich hier * <code>mysql</code>, <code>Y-m-d H:i:s</code> bzw. eine leere Format-Angabe.
 Rein theoretisch sind auch andere Format-Varianten möglich, nur aktuell nicht getestet.
