@@ -1,6 +1,13 @@
 Changelog
 =========
 
+Version 0.2.1 - 24.09.2019
+------------------------------
+
+## Updates
+
+* Kompatibiliät zu yForm  3.x hergestellt.
+
 Version 0.2.0 - 08.03.2018
 ------------------------------
 
